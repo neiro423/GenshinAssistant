@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">GenshinAssistant</string>
+    <string name="home">Home</string>
+    <string name="calculator">Calculator</string>
+    <string name="database">Database</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="todo">todo</string>
+    <string name="constellations">Constellations</string>
+    <string-array name="character_constellations">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+</resources>
