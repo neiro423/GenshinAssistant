@@ -2,19 +2,35 @@ package com.saize.genshinassistant
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.Navigation
-import androidx.navigation.ui.NavigationUI.setupWithNavController
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.onNavDestinationSelected
+import androidx.navigation.ui.setupWithNavController
+import com.saize.genshinassistant.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
+
+    private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
 
-        val navController = Navigation.findNavController(this, R.id.activity_main_nav_host_fragment)
-        val bottomNavigationView =
-            findViewById<BottomNavigationView>(R.id.bottom_navigation)
-        setupWithNavController(bottomNavigationView, navController)
+
+
+        val navHostFragment = supportFragmentManager
+            .findFragmentById(R.id.main_container) as NavHostFragment
+        val navController = navHostFragment.navController
+
+        binding.bottomNavigation.apply {
+            setupWithNavController(navController)
+            setOnItemReselectedListener {
+                navController.popBackStack(it.itemId, false)
+            }
+            setOnItemSelectedListener {
+                it.onNavDestinationSelected(navController)
+                true
+            }
+        }
     }
 }
