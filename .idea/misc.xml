@@ -13,7 +13,11 @@
         <entry key="..\:/AndroidStudioProjects/GenshinAssistant/app/src/main/res/menu/toolbar_menu.xml" value="0.365625" />
         <entry key="app/src/main/res/drawable/ic_toolbar_settings.xml" value="0.1255" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/fragment_calculator_add_character.xml" value="0.24166666666666667" />
+        <entry key="app/src/main/res/layout/fragment_calculator_artifacts.xml" value="0.24166666666666667" />
         <entry key="app/src/main/res/layout/fragment_calculator_details.xml" value="0.14010416666666667" />
+        <entry key="app/src/main/res/layout/fragment_calculator_party_buffs.xml" value="0.24166666666666667" />
+        <entry key="app/src/main/res/layout/fragment_database.xml" value="0.24166666666666667" />
       </map>
     </option>
   </component>

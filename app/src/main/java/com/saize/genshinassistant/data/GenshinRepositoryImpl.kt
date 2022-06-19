@@ -6,6 +6,9 @@ import io.realm.kotlin.Realm
 import io.realm.kotlin.ext.query
 import io.realm.kotlin.query.find
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flowOn
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
@@ -21,10 +24,11 @@ class GenshinRepositoryImpl @Inject constructor(
 
     }
 
-    override suspend fun getCharacters(): List<GenshinCharacter> = withContext(Dispatchers.IO) {
-        realm.query<GenshinCharacter>()
-            .find()
-            .toList()
+    override fun getCharacters(): Flow<List<GenshinCharacter>> {
+        return realm.query<GenshinCharacter>()
+            .asFlow()
+            .flowOn(Dispatchers.IO)
+            .map { it.list.toList() }
     }
 
     override suspend fun addCharacter(newCharacter: GenshinCharacter) = withContext(Dispatchers.IO) {

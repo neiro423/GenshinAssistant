@@ -46,7 +46,8 @@ object RealmHolder {
                                             desc = null
                                         }
                                     )
-                                })
+                                },
+                            )
                             weapon = GenshinWeapon().apply {
                                 name = "Lion's Roar"
                                 picture = "${artifactsIconsPath}Royal Flora.png"
