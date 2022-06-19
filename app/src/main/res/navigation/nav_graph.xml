@@ -6,12 +6,12 @@
     app:startDestination="@id/homeFragment">
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.saize.genshinassistant.fragments.HomeFragment"
+        android:name="com.saize.genshinassistant.fragments.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/calculatorFragment"
-        android:name="com.saize.genshinassistant.fragments.CalculatorFragment"
+        android:name="com.saize.genshinassistant.fragments.calculator.CalculatorFragment"
         android:label="fragment_calculator"
         tools:layout="@layout/fragment_calculator" >
         <action
@@ -23,12 +23,12 @@
     </fragment>
     <fragment
         android:id="@+id/databaseFragment"
-        android:name="com.saize.genshinassistant.fragments.DatabaseFragment"
+        android:name="com.saize.genshinassistant.fragments.database.DatabaseFragment"
         android:label="fragment_database"
         tools:layout="@layout/fragment_database" />
     <fragment
         android:id="@+id/calculatorDetailsFragment"
-        android:name="com.saize.genshinassistant.fragments.CalculatorDetailsFragment"
+        android:name="com.saize.genshinassistant.fragments.calculator_details.CalculatorDetailsFragment"
         android:label="fragment_calculator_details"
         tools:layout="@layout/fragment_calculator_details" >
         <action
@@ -40,12 +40,12 @@
     </fragment>
     <fragment
         android:id="@+id/calculatorAddCharacterFragment"
-        android:name="com.saize.genshinassistant.fragments.CalculatorAddCharacterFragment"
+        android:name="com.saize.genshinassistant.fragments.calculator_add_character.CalculatorAddCharacterFragment"
         android:label="fragment_calculator_add_character"
         tools:layout="@layout/fragment_calculator_add_character" />
     <fragment
         android:id="@+id/calculatorArtifactsFragment"
-        android:name="com.saize.genshinassistant.fragments.CalculatorArtifactsFragment"
+        android:name="com.saize.genshinassistant.fragments.calculator_artifacts.CalculatorArtifactsFragment"
         android:label="fragment_calculator_artifacts"
         tools:layout="@layout/fragment_calculator_artifacts" >
         <action
@@ -54,12 +54,12 @@
     </fragment>
     <fragment
         android:id="@+id/calculatorAddArtifactsFragment"
-        android:name="com.saize.genshinassistant.fragments.CalculatorAddArtifactsFragment"
+        android:name="com.saize.genshinassistant.fragments.calculator_add_artifacts.CalculatorAddArtifactsFragment"
         android:label="fragment_calculator_add_artifacts"
         tools:layout="@layout/fragment_calculator_add_artifacts" />
     <fragment
         android:id="@+id/calculatorPartyBuffsFragment"
-        android:name="com.saize.genshinassistant.fragments.CalculatorPartyBuffsFragment"
+        android:name="com.saize.genshinassistant.fragments.calculator_party_buffs.CalculatorPartyBuffsFragment"
         android:label="fragment_calculator_party_buffs"
         tools:layout="@layout/fragment_calculator_party_buffs" />
 </navigation>
