@@ -4,10 +4,31 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidStudioProjects/GenshinAssistant/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/GenshinAssistant/app/src/main/res/layout/fragment_calculactor_details_artifact_add.xml" value="0.3328804347826087" />
+        <entry key="..\:/AndroidStudioProjects/GenshinAssistant/app/src/main/res/layout/fragment_calculactor_details_artifact_add_base.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/GenshinAssistant/app/src/main/res/layout/fragment_calculactor_details_artifact_add_my.xml" value="0.3328804347826087" />
+        <entry key="..\:/AndroidStudioProjects/GenshinAssistant/app/src/main/res/layout/fragment_calculactor_details_artifacts_add.xml" value="0.3328804347826087" />
         <entry key="..\:/AndroidStudioProjects/GenshinAssistant/app/src/main/res/layout/fragment_calculator.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidStudioProjects/GenshinAssistant/app/src/main/res/layout/fragment_calculator_add.xml" value="0.3328804347826087" />
+        <entry key="..\:/AndroidStudioProjects/GenshinAssistant/app/src/main/res/layout/fragment_calculator_add_artifacts.xml" value="0.3446557971014493" />
         <entry key="..\:/AndroidStudioProjects/GenshinAssistant/app/src/main/res/layout/fragment_calculator_add_character.xml" value="0.36666666666666664" />
-        <entry key="..\:/AndroidStudioProjects/GenshinAssistant/app/src/main/res/layout/fragment_calculator_details.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/GenshinAssistant/app/src/main/res/layout/fragment_calculator_add_character_base.xml" value="0.3328804347826087" />
+        <entry key="..\:/AndroidStudioProjects/GenshinAssistant/app/src/main/res/layout/fragment_calculator_artifacts.xml" value="0.3328804347826087" />
+        <entry key="..\:/AndroidStudioProjects/GenshinAssistant/app/src/main/res/layout/fragment_calculator_details.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProjects/GenshinAssistant/app/src/main/res/layout/fragment_calculator_details_artifact.xml" value="0.3328804347826087" />
+        <entry key="..\:/AndroidStudioProjects/GenshinAssistant/app/src/main/res/layout/fragment_calculator_details_character.xml" value="0.3328804347826087" />
+        <entry key="..\:/AndroidStudioProjects/GenshinAssistant/app/src/main/res/layout/fragment_calculator_details_character_add_enemy.xml" value="0.3328804347826087" />
+        <entry key="..\:/AndroidStudioProjects/GenshinAssistant/app/src/main/res/layout/fragment_calculator_details_character_add_weapon.xml" value="0.3328804347826087" />
+        <entry key="..\:/AndroidStudioProjects/GenshinAssistant/app/src/main/res/layout/fragment_calculator_details_character_stats.xml" value="0.3328804347826087" />
+        <entry key="..\:/AndroidStudioProjects/GenshinAssistant/app/src/main/res/layout/fragment_calculator_details_party_buffs.xml" value="0.3509963768115942" />
+        <entry key="..\:/AndroidStudioProjects/GenshinAssistant/app/src/main/res/layout/fragment_calculator_party_buffs.xml" value="0.3328804347826087" />
         <entry key="..\:/AndroidStudioProjects/GenshinAssistant/app/src/main/res/layout/fragment_database.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidStudioProjects/GenshinAssistant/app/src/main/res/layout/fragment_database_achievements.xml" value="0.3328804347826087" />
+        <entry key="..\:/AndroidStudioProjects/GenshinAssistant/app/src/main/res/layout/fragment_database_my_artifacts.xml" value="0.3328804347826087" />
+        <entry key="..\:/AndroidStudioProjects/GenshinAssistant/app/src/main/res/layout/fragment_database_my_artifacts_add.xml" value="0.3328804347826087" />
+        <entry key="..\:/AndroidStudioProjects/GenshinAssistant/app/src/main/res/layout/fragment_database_my_artifacts_add_details.xml" value="0.3328804347826087" />
+        <entry key="..\:/AndroidStudioProjects/GenshinAssistant/app/src/main/res/layout/fragment_database_my_characters.xml" value="0.3328804347826087" />
+        <entry key="..\:/AndroidStudioProjects/GenshinAssistant/app/src/main/res/layout/fragment_database_my_characters_details.xml" value="0.3328804347826087" />
         <entry key="..\:/AndroidStudioProjects/GenshinAssistant/app/src/main/res/layout/fragment_home.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidStudioProjects/GenshinAssistant/app/src/main/res/menu/navigation_menu.xml" value="0.33" />
         <entry key="..\:/AndroidStudioProjects/GenshinAssistant/app/src/main/res/menu/toolbar_menu.xml" value="0.365625" />

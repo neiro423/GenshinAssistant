@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.calculator_details.CalculatorDetailsFragment">
+    tools:context=".fragments.database_my_artifacts_add.DatabaseMyArtifactsAddFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

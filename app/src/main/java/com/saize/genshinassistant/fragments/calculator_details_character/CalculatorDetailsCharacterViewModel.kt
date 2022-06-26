@@ -1,4 +1,4 @@
-package com.saize.genshinassistant.fragments.calculator_details
+package com.saize.genshinassistant.fragments.calculator_details_character
 
 import androidx.lifecycle.viewModelScope
 import com.saize.genshinassistant.base.BaseViewModel
@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.stateIn
 import javax.inject.Inject
 
 @HiltViewModel
-class CalculatorDetailsViewModel @Inject constructor(
+class CalculatorDetailsCharacterViewModel @Inject constructor(
     private val getAllCharacters: GetAllCharactersCase
 ) : BaseViewModel() {
 
