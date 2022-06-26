@@ -13,7 +13,14 @@
         android:id="@+id/calculatorFragment"
         android:name="com.saize.genshinassistant.fragments.calculator.CalculatorFragment"
         android:label="fragment_calculator"
-        tools:layout="@layout/fragment_calculator" />
+        tools:layout="@layout/fragment_calculator" >
+        <action
+            android:id="@+id/action_calculatorFragment_to_calculatorAddCharacterFragment"
+            app:destination="@id/calculatorAddCharacterFragment" />
+        <action
+            android:id="@+id/action_calculatorFragment_to_calculatorDetailsFragment"
+            app:destination="@id/calculatorDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/databaseFragment"
         android:name="com.saize.genshinassistant.fragments.database.DatabaseFragment"
@@ -38,7 +45,11 @@
         android:id="@+id/databaseMyArtifactsFragment"
         android:name="com.saize.genshinassistant.fragments.database_my_artifacts.DatabaseMyArtifactsFragment"
         android:label="fragment_database_my_artifacts"
-        tools:layout="@layout/fragment_database_my_artifacts" />
+        tools:layout="@layout/fragment_database_my_artifacts" >
+        <action
+            android:id="@+id/action_databaseMyArtifactsFragment_to_databaseMyArtifactsAddFragment"
+            app:destination="@id/databaseMyArtifactsAddFragment" />
+    </fragment>
     <fragment
         android:id="@+id/databaseMyCharactersFragment"
         android:name="com.saize.genshinassistant.fragments.database_my_characters.DatabaseMyCharactersFragment"
@@ -53,4 +64,124 @@
         android:name="com.saize.genshinassistant.fragments.database_my_characters_details.DatabaseMyCharactersDetailsFragment"
         android:label="fragment_database_my_characters_details"
         tools:layout="@layout/fragment_database_my_characters_details" />
+    <fragment
+        android:id="@+id/databaseMyArtifactsAddFragment"
+        android:name="com.saize.genshinassistant.fragments.database_my_artifacts_add.DatabaseMyArtifactsAddFragment"
+        android:label="fragment_database_my_artifacts_add"
+        tools:layout="@layout/fragment_database_my_artifacts_add" >
+        <action
+            android:id="@+id/action_databaseMyArtifactsAddFragment_to_databaseMyArtifactsAddDetailsFragment"
+            app:destination="@id/databaseMyArtifactsAddDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/databaseMyArtifactsAddDetailsFragment"
+        android:name="com.saize.genshinassistant.fragments.database_my_artifacts_add_details.DatabaseMyArtifactsAddDetailsFragment"
+        android:label="fragment_database_my_artifacts_add_details"
+        tools:layout="@layout/fragment_database_my_artifacts_add_details" />
+    <fragment
+        android:id="@+id/calculatorAddCharacterFragment"
+        android:name="com.saize.genshinassistant.fragments.calculator_add_character.CalculatorAddCharacterFragment"
+        android:label="fragment_calculator_add_character"
+        tools:layout="@layout/fragment_calculator_add_character" >
+        <action
+            android:id="@+id/action_calculatorAddCharacterFragment_to_calculatorAddCharacterBaseFragment"
+            app:destination="@id/calculatorAddCharacterBaseFragment" />
+        <action
+            android:id="@+id/action_calculatorAddCharacterFragment_to_calculatorAddCharacterMyFragment"
+            app:destination="@id/calculatorAddCharacterMyFragment" />
+        <action
+            android:id="@+id/action_calculatorAddCharacterFragment_to_calculatorDetailsFragment"
+            app:destination="@id/calculatorDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calculatorAddCharacterBaseFragment"
+        android:name="com.saize.genshinassistant.fragments.calculator_add_character_base.CalculatorAddCharacterBaseFragment"
+        android:label="fragment_calculator_add_character_base"
+        tools:layout="@layout/fragment_calculator_add_character_base" />
+    <fragment
+        android:id="@+id/calculatorAddCharacterMyFragment"
+        android:name="com.saize.genshinassistant.fragments.calculator_add_character_my.CalculatorAddCharacterMyFragment"
+        android:label="fragment_calculator_add_character_my"
+        tools:layout="@layout/fragment_calculator_add_character_my" />
+    <fragment
+        android:id="@+id/calculatorDetailsCharacterFragment"
+        android:name="com.saize.genshinassistant.fragments.calculator_details_character.CalculatorDetailsCharacterFragment"
+        android:label="fragment_calculator_details_character"
+        tools:layout="@layout/fragment_calculator_details_character" >
+        <action
+            android:id="@+id/action_calculatorDetailsCharacterFragment_to_calculatorDetailsCharacterAddEnemyFragment"
+            app:destination="@id/calculatorDetailsCharacterAddEnemyFragment" />
+        <action
+            android:id="@+id/action_calculatorDetailsCharacterFragment_to_calculatorDetailsCharacterAddWeaponFragment"
+            app:destination="@id/calculatorDetailsCharacterAddWeaponFragment" />
+        <action
+            android:id="@+id/action_calculatorDetailsCharacterFragment_to_calculatorDetailsCharacterStatsFragment"
+            app:destination="@id/calculatorDetailsCharacterStatsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calculatorDetailsCharacterAddEnemyFragment"
+        android:name="com.saize.genshinassistant.fragments.calculator_details_character_add_enemy.CalculatorDetailsCharacterAddEnemyFragment"
+        android:label="fragment_calculator_details_character_add_enemy"
+        tools:layout="@layout/fragment_calculator_details_character_add_enemy" />
+    <fragment
+        android:id="@+id/calculatorDetailsCharacterAddWeaponFragment"
+        android:name="com.saize.genshinassistant.fragments.calculator_details_character_add_weapon.CalculatorDetailsCharacterAddWeaponFragment"
+        android:label="fragment_calculator_details_character_add_weapon"
+        tools:layout="@layout/fragment_calculator_details_character_add_weapon" />
+    <fragment
+        android:id="@+id/calculatorDetailsArtifactsFragment"
+        android:name="com.saize.genshinassistant.fragments.calculator_details_artifacts.CalculatorDetailsArtifactsFragment"
+        android:label="fragment_calculator_details_artifacts"
+        tools:layout="@layout/fragment_calculator_details_artifacts" >
+        <action
+            android:id="@+id/action_calculatorDetailsArtifactsFragment_to_calculatorDetailsArtifactsAddFragment"
+            app:destination="@id/calculatorDetailsArtifactsAddFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calculatorDetailsFragment"
+        android:name="com.saize.genshinassistant.fragments.calculator_details.CalculatorDetailsFragment"
+        android:label="fragment_calculator_details"
+        tools:layout="@layout/fragment_calculator_details" >
+        <action
+            android:id="@+id/action_calculatorDetailsFragment_to_calculatorDetailsCharacterFragment"
+            app:destination="@id/calculatorDetailsCharacterFragment" />
+        <action
+            android:id="@+id/action_calculatorDetailsFragment_to_calculatorDetailsArtifactsFragment"
+            app:destination="@id/calculatorDetailsArtifactsFragment" />
+        <action
+            android:id="@+id/action_calculatorDetailsFragment_to_calculatorDetailsPartyBuffsFragment"
+            app:destination="@id/calculatorDetailsPartyBuffsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calculatorDetailsArtifactsAddFragment"
+        android:name="com.saize.genshinassistant.fragments.calculator_details_artifacts_add.CalculatorDetailsArtifactsAddFragment"
+        android:label="fragment_calculactor_details_artifacts_add"
+        tools:layout="@layout/fragment_calculactor_details_artifacts_add" >
+        <action
+            android:id="@+id/action_calculatorDetailsArtifactsAddFragment_to_calculatorDetailsArtifactsAddBaseFragment"
+            app:destination="@id/calculatorDetailsArtifactsAddBaseFragment" />
+        <action
+            android:id="@+id/action_calculatorDetailsArtifactsAddFragment_to_calculatorDetailsArtifactsAddMyFragment"
+            app:destination="@id/calculatorDetailsArtifactsAddMyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calculatorDetailsArtifactsAddBaseFragment"
+        android:name="com.saize.genshinassistant.fragments.calculator_details_artifacts_add_base.CalculatorDetailsArtifactsAddBaseFragment"
+        android:label="fragment_calculactor_details_artifact_add_base"
+        tools:layout="@layout/fragment_calculactor_details_artifact_add_base" />
+    <fragment
+        android:id="@+id/calculatorDetailsArtifactsAddMyFragment"
+        android:name="com.saize.genshinassistant.fragments.calculator_details_artifacts_add_my.CalculatorDetailsArtifactsAddMyFragment"
+        android:label="fragment_calculactor_details_artifact_add_my"
+        tools:layout="@layout/fragment_calculactor_details_artifact_add_my" />
+    <fragment
+        android:id="@+id/calculatorDetailsPartyBuffsFragment"
+        android:name="com.saize.genshinassistant.fragments.calculator_details_party_buffs.CalculatorDetailsPartyBuffsFragment"
+        android:label="fragment_calculator_details_party_buffs"
+        tools:layout="@layout/fragment_calculator_details_party_buffs" />
+    <fragment
+        android:id="@+id/calculatorDetailsCharacterStatsFragment"
+        android:name="com.saize.genshinassistant.fragments.calculator_details_character_stats.CalculatorDetailsCharacterStatsFragment"
+        android:label="fragment_calculator_details_character_stats"
+        tools:layout="@layout/fragment_calculator_details_character_stats" />
 </navigation>
