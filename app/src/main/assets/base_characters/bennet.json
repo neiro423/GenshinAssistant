@@ -1,0 +1,33 @@
+{
+  "name": "Bennet",
+  "level": 90,
+  "isLevelAscended": false,
+  "rarity": 4,
+  "weaponType": "SWORD",
+  "stats": [
+    {
+      "first": "HP",
+      "second": 12379
+    },
+    {
+      "first": "CHAR_ATK",
+      "second": 191
+    },
+    {
+      "first": "DEF",
+      "second": 771
+    },
+    {
+      "first": "ENERGY_RECHARGE",
+      "second": 126.7
+    },
+    {
+      "first": "CRIT_PERCENT",
+      "second": 5
+    },
+    {
+      "first": "CRIT_DMG",
+      "second": 50
+    }
+  ]
+}

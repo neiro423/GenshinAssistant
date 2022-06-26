@@ -15,15 +15,13 @@ class HomeViewModel @Inject constructor(
 
     fun loadData() {
         viewModelScope.launch {
-            getCharacterCase.execute("Хуеплет")
+            getCharacterCase.execute("My Bennet")
                 .also { character ->
                     character ?: return@also
                     pushViewEvent {
                         Toast.makeText(
                             it.requireContext(), """
-                                ${character.artifacts?.toList()}
-                                ${character.name}
-                                ${character.customName}
+                                ${character.second}
                             """, Toast.LENGTH_LONG
                         ).show()
                     }

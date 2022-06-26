@@ -1,88 +1,77 @@
+@file:OptIn(ExperimentalSerializationApi::class)
+
 package com.saize.genshinassistant.data
 
-import android.util.Base64
+import android.content.Context
 import com.saize.genshinassistant.data.model.*
+import com.saize.genshinassistant.domain.model.GenshinBaseCharacter
 import io.realm.kotlin.Realm
 import io.realm.kotlin.RealmConfiguration
-import io.realm.kotlin.ext.realmListOf
+import io.realm.kotlin.ext.query
+import io.realm.kotlin.ext.toRealmList
+import io.realm.kotlin.types.RealmObject
+import kotlinx.serialization.ExperimentalSerializationApi
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.decodeFromStream
 
 val charactersIconsPath get() = "/CharacterIcon/"
 val artifactsIconsPath get() = "/ArtifactsIcon/"
 
+val charactersInitPath get() = "base_characters/"
+val artifactsInitPath get() = "artifacts/"
+val weaponInitPath get() = "weapons/"
+
 object RealmHolder {
-    val realm: Realm by lazy {
+    private val config =
         RealmConfiguration.Builder(
             setOf(
-                GenshinStat::class,
-                GenshinCharacter::class,
-                GenshinArcifact::class,
-                GenshinWeapon::class,
-                BaseStatsGroup::class
+                GenshinCharacterData::class,
+                GenshinBaseCharacterData::class,
+                GenshinArtifactData::class,
+                GenshinStatData::class,
+                GenshinWeaponData::class,
+                GenshinArtOpData::class,
+                GenshinTalentData::class,
+                GenshinStatPair::class
             )
         )
             .deleteRealmIfMigrationNeeded()
             .build()
-            .let(Realm::open)
-            .also { realm ->
-                realm.writeBlocking {
-                    copyToRealm(
-                        GenshinCharacter().apply {
-                            customName = "Хуеплет"
-                            name = "Bennet"
-                            picture = "${charactersIconsPath}Bennet.png"
-                            artifacts = realmListOf(
-                                GenshinArcifact().apply {
-                                    name = "Залупа"
-                                    picture = "${artifactsIconsPath}Royal Flora.png"
-                                    mainStat = GenshinStat().apply {
-                                        name = "HP"
-                                        value = 20.0
-                                        desc = null
-                                    }
-                                    stats = realmListOf(
-                                        GenshinStat().apply {
-                                            name = "HP%"
-                                            value = 20.0
-                                            desc = null
-                                        }
-                                    )
-                                },
-                            )
-                            weapon = GenshinWeapon().apply {
-                                name = "Lion's Roar"
-                                picture = "${artifactsIconsPath}Royal Flora.png"
-                                baseAtk = 20.0
-                                level = 20
-                                refineRankLevel = 5
-                                mainStat = GenshinStat().apply {
-                                    name = "SomeStat"
-                                    value = 30.0
-                                }
-                                stats = realmListOf(
-                                    GenshinStat().apply {
-                                        name = "SomeStat"
-                                        value = 10.0
-                                    }
-                                )
-                            }
-                            stats = BaseStatsGroup().apply {
-                                baseStats = realmListOf(
-                                    GenshinStat().apply {
-                                        name = "SomeStat"
-                                        value = 10.0
-                                    }
-                                )
-                                advancedStats = realmListOf(
-                                    GenshinStat().apply {
-                                        name = "SomeStat"
-                                        value = 10.0
-                                    }
-                                )
-                            }
 
-                        }
-                    )
-                }
+    val realm: Realm by lazy { Realm.open(config) }
+
+    fun init(context: Context) {
+        val count = realm.query<GenshinBaseCharacterData>().count().find()
+        if (count > 0L) return
+        val characters = context.getFromAssets<GenshinBaseCharacterData>(charactersInitPath)
+        val artifact = context.getFromAssets<GenshinArtifactData>(artifactsInitPath)
+        val weapons = context.getFromAssets<GenshinWeaponData>(weaponInitPath)
+        val everything = listOf(characters, artifact, weapons).flatten()
+        realm.writeBlocking {
+            everything.forEach(::copyToRealm)
+            GenshinCharacterData().apply {
+                customName = "My Bennet"
+                artifacts = artifact.toRealmList()
+                weapon = weapons.firstOrNull()
+                baseCharacter = characters.firstOrNull()
+            }.also(::copyToRealm)
+        }
+    }
+
+    inline fun <reified T : RealmObject> Context.getFromAssets(path: String): List<T> {
+        val files = assets.list(path)
+        return when {
+            files.isNullOrEmpty() -> emptyList()
+
+            else -> files.map {
+                assets.open("$path$it")
+                    .let { stream -> Json.decodeFromStream(stream) }
             }
+        }
+    }
+
+    fun clear() {
+        realm.close()
+        Realm.deleteRealm(config)
     }
 }

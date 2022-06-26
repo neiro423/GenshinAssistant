@@ -1,0 +1,16 @@
+{
+  "name": "Aquila Favonia",
+  "rarity": 5,
+  "level": 90,
+  "isLevelAscended": false,
+  "refineRankLevel": 1,
+  "stats": [
+    {
+      "name": "PHYSICAL_DMG",
+      "value": {
+        "operatingStat": "DEF_PERCENT",
+        "opValue": 41.3
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Royal Flora",
+  "rarity": 5,
+  "level": 20,
+  "stats": [
+    {
+      "name": "HP",
+      "value": {
+        "operatingStat": "HP",
+        "opValue": 4780
+      }
+    },
+    {
+      "name": "DEF_PERCENT",
+      "value": {
+        "operatingStat": "DEF_PERCENT",
+        "opValue": 13.1
+      }
+    },
+    {
+      "name": "BONUS_ATK_PERCENT",
+      "value": {
+        "operatingStat": "DEF_PERCENT",
+        "opValue": 10.5
+      }
+    }
+  ],
+  "parentSet": "Noblesse Oblige"
+}
